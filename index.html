@@ -9,17 +9,22 @@
 <body>
   <header>
     <div class="container">
-      <h1>Hi, I am Chinmayee Makaraju</h1>
-      <h2>An Experienced Data Analyst</h2>
-      <p>Experienced Data Analyst with over 4 years of expertise in scalable software development, data engineering, and process optimization. Skilled in Python, SQL, and cloud technologies, delivering impactful, data-driven solutions.</p>
-      <a href="#contact" class="btn">Contact Me</a>
+      <div class="profile">
+        <img src="profile.jpg" alt="Chinmayee Makaraju" class="profile-img">
+        <div>
+          <h1>Hi, I am <strong>Chinmayee Makaraju</strong></h1>
+          <h2>An Experienced <strong>Data Analyst</strong></h2>
+          <p>Experienced Data Analyst with over 4 years of expertise in scalable software development, data engineering, and process optimization. Skilled in Python, SQL, and cloud technologies, delivering impactful, data-driven solutions.</p>
+          <a href="#contact" class="btn">Contact Me</a>
+        </div>
+      </div>
     </div>
   </header>
 
   <section id="projects" class="container">
-    <h2>Projects</h2>
-    <div class="project">
-      <h3>Risk Analysis Dashboard</h3>
+    <h2><strong>Projects</strong></h2>
+    <div class="project" onclick="showDetails('project1')">
+      <h3><strong>Risk Analysis Dashboard</strong></h3>
       <p>Developed Tableau dashboards to monitor compliance and mitigate risks, reducing issue resolution times by 25%.</p>
       <div class="tags">
         <span>Tableau</span>
@@ -27,8 +32,8 @@
         <span>Risk Management</span>
       </div>
     </div>
-    <div class="project">
-      <h3>AWS Cloud Migration</h3>
+    <div class="project" onclick="showDetails('project2')">
+      <h3><strong>AWS Cloud Migration</strong></h3>
       <p>Migrated data infrastructure to AWS, improving scalability and data reliability for risk management applications.</p>
       <div class="tags">
         <span>AWS</span>
@@ -36,8 +41,8 @@
         <span>SQL</span>
       </div>
     </div>
-    <div class="project">
-      <h3>End-to-End ETL Pipeline</h3>
+    <div class="project" onclick="showDetails('project3')">
+      <h3><strong>End-to-End ETL Pipeline</strong></h3>
       <p>Built a Python-based ETL pipeline integrated with Snowflake and Tableau to process stock market data and visualize insights, enabling data-driven trading strategies.</p>
       <div class="tags">
         <span>Python</span>
@@ -49,23 +54,23 @@
   </section>
 
   <section id="certifications" class="container">
-    <h2>Certifications</h2>
-    <div class="certification">
-      <h3>AI Agents in LangChain</h3>
+    <h2><strong>Certifications</strong></h2>
+    <div class="certification" onclick="showDetails('cert1')">
+      <h3><strong>AI Agents in LangChain</strong></h3>
       <p>CREDENTIALS</p>
     </div>
-    <div class="certification">
-      <h3>AWS Cloud Practitioner</h3>
+    <div class="certification" onclick="showDetails('cert2')">
+      <h3><strong>AWS Cloud Practitioner</strong></h3>
       <p>CREDENTIALS</p>
     </div>
-    <div class="certification">
-      <h3>Databricks Gen AI Fundamentals</h3>
+    <div class="certification" onclick="showDetails('cert3')">
+      <h3><strong>Databricks Gen AI Fundamentals</strong></h3>
       <p>CREDENTIALS</p>
     </div>
   </section>
 
   <section id="skills" class="container">
-    <h2>Skills</h2>
+    <h2><strong>Skills</strong></h2>
     <div class="skills-list">
       <span>Python</span>
       <span>SQL</span>
@@ -82,7 +87,7 @@
   </section>
 
   <section id="contact" class="container">
-    <h2>Contact</h2>
+    <h2><strong>Contact</strong></h2>
     <p>Email: <a href="mailto:chinmayee0325@gmail.com">chinmayee0325@gmail.com</a></p>
     <p>Phone: +1 (240) 796-3909</p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/chinmayee-makaraju" target="_blank">Chinmayee Makaraju</a></p>
@@ -90,9 +95,18 @@
 
   <footer>
     <div class="container">
-      <p>Created with love by Chinmayee Makaraju ❤️</p>
+      <p>Created with love by <strong>Chinmayee Makaraju</strong> ❤️</p>
     </div>
   </footer>
+
+  <!-- Modal for Detailed View -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
