@@ -1,161 +1,115 @@
-/* General Styles */
+/* styles.css */
+:root {
+    --primary-intelligence: #2A4E6C;
+    --secondary-insight: #5B8BAE;
+    --accent-impact: #FF6B6B;
+    --background-brain: #F9FBFD;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  color: #000000;
+    font-family: 'Inter', sans-serif;
+    background: var(--background-brain);
+    color: #2D3436;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
+.smart-header {
+    background: var(--primary-intelligence);
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-header {
-  background: #0073e6;
-  color: #ffffff;
-  padding: 40px 0;
-  text-align: center;
+.initials-logo {
+    width: 50px;
+    height: 50px;
+    background: var(--accent-impact);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-right: 1rem;
 }
 
-header .profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+.value-prop {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0.5rem 0;
+    line-height: 1.4;
 }
 
-header .profile-img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
+.synergy-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 70vh;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
+.insights-blog {
+    border-right: 3px solid var(--secondary-insight);
+    padding-right: 2rem;
 }
 
-header h2 {
-  margin: 10px 0;
-  font-size: 1.5em;
+.blog-post {
+    background: white;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-header p {
-  font-size: 1.1em;
-  margin: 20px 0;
+.blog-post:hover {
+    transform: translateX(10px);
+    border-left: 4px solid var(--accent-impact);
 }
 
-header .btn {
-  background: #005bb5;
-  color: #ffffff;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
+.impact-grid {
+    display: grid;
+    gap: 1.5rem;
+    padding: 1rem;
+    perspective: 1000px;
 }
 
-header .btn:hover {
-  background: #004080;
+.grid-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    animation: gridSlide 0.6s ease-out;
 }
 
-h2 {
-  color: #0073e6;
-  border-bottom: 2px solid #0073e6;
-  padding-bottom: 10px;
-  margin-top: 40px;
+@keyframes gridSlide {
+    from { transform: translateX(100px) rotateY(15deg); opacity: 0; }
+    to { transform: translateX(0) rotateY(0); opacity: 1; }
 }
 
-.project, .certification {
-  margin-bottom: 20px;
-  padding: 15px;
-  border: 1px solid #dddddd;
-  border-radius: 5px;
-  cursor: pointer;
+.tech-stack span {
+    background: var(--primary-intelligence);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
 }
 
-.project:hover, .certification:hover {
-  background: #f0f0f0;
+.linkedin-cta {
+    display: inline-block;
+    background: var(--accent-impact);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
 }
 
-.project h3, .certification h3 {
-  margin: 0;
-  color: #0073e6;
-}
-
-.tags {
-  margin-top: 10px;
-}
-
-.tags span {
-  display: inline-block;
-  background: #0073e6;
-  color: #ffffff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  margin-right: 5px;
-  font-size: 0.9em;
-}
-
-.skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills-list span {
-  background: #0073e6;
-  color: #ffffff;
-  padding: 10px 15px;
-  border-radius: 5px;
-  font-size: 0.9em;
-}
-
-footer {
-  background: #0073e6;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 0;
-  margin-top: 40px;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Modal Styles */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-  background-color: #ffffff;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #0073e6;
-  border-radius: 5px;
-  width: 60%;
-  color: #000000;
-}
-
-.close {
-  color: #0073e6;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: #005bb5;
+.linkedin-cta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255,107,107,0.3);
 }
